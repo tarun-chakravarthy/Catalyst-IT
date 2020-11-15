@@ -1,9 +1,31 @@
-<ul *ngIf="users">
-    <li>Name: {{users.name}}</li>
-    <li>Description: {{users.description}}</li>
-    <li>Location: {{users.location}}</li>
-    <li>Total Number of Repositories: {{users.public_repos}}</li>
-    <li>Blog URL: <a href="{{users.blog}}">{{users.blog}} </a></li>
-    <i (click)="onNavigate(users.html_url)" class="fa fa-github" style="font-size:48px;color:red"></i>
-
-</ul>
+<!-- Catalyst-IT Git-Hub Details Component  -->
+<div *ngIf="users" class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-2 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4">
+      <div class="card card-elegant">
+        <div class="card-header">
+          <div>
+            <img class="card-img-top" src="{{users.avatar_url}}" alt="Card image cap" />
+          </div>
+          <div>
+            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> {{users.location}}</h4>
+          </div>
+        </div>
+        <div class="card-block">
+          <h5 class="card-title">
+            <small>Git Hub User with <b>{{users.public_repos}} </b> public repositories</small>
+            <br>{{users.name}}</h5>
+          <h6 class="card-text"> <b> Description </b> </h6>
+          <h2 class="card-text"> {{users.description}} </h2>
+          <div class="social-icons">
+            <div class="icon-block">
+              <a href="{{users.html_url}}"><i class="fa fa-github"></i></a>
+              <a href="{{users.blog}}"><i class="fa fa-rss"></i></a>
+            </div>
+          </div>
+          <a class="btn btn-outline-success p-3 m-4" href="/repos">Open Repositories</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
