@@ -21,9 +21,9 @@ export class GithubCatalystService {
     return this.http.get(url)
   }
 
-  getContributors(repositoRyName: string): Observable<any> {
+  getContributors(repositoryName: string): Observable<any> {
 
-    const url = `https://api.github.com/repos/catalyst/${repositoRyName}/contributors`
+    const url = `https://api.github.com/repos/catalyst/${repositoryName}/contributors`
     return this.http.get(url)
   }
 }

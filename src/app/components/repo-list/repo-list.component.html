@@ -1,61 +1,49 @@
-<div>
-    <label class="radio-inline"><input type="radio" name="optradio" (change)="applyFilter('Forked')">Forked</label>
-    <label class="radio-inline"><input type="radio" name="optradio" (change)="applyFilter('Not Forked')">Not
-        Forked</label>
-    <label class="radio-inline"><input type="radio" name="optradio" (change)="applyFilter('All')">All</label>
-</div>
+<div class="filter-options">
 
-<div>
+  <div>
+    <label class="radio-inline"><input type="radio" name="optradio" (change)="applyFilter('Forked')"><i
+        class="fa fa-code-fork" aria-hidden="true"></i> Forked</label>
+    <label class="radio-inline"><input type="radio" name="optradio" (change)="applyFilter('Not Forked')">Not
+      Forked</label>
+    <label class="radio-inline"><input type="radio" name="optradio" (change)="applyFilter('All')">All</label>
+  </div>
+
+  <div>
     <label class="radio-inline"><input type="radio" name="sort" (change)="applySort('Name')">Name</label>
     <label class="radio-inline"><input type="radio" name="sort" (change)="applySort('Created Time')">Created
-        Time</label>
+      Time</label>
     <label class="radio-inline"><input type="radio" name="sort" (change)="applySort('Updated Time')">Updated
-        Time</label>
+      Time</label>
+  </div>
+
 </div>
 
-<div class="repo-container">
-    <table class="table table-bordered table-hover table-responsive">
-        <thead>
-            <tr>
-                <th> Name </th>
-                <th> Description </th>
-                <th> Git HUB URL </th>
-                <th> Language </th>
-                <th> Is It A Fork </th>
-                <th> Star Count </th>
-                <th> Watchers Count </th>
-                <th> License </th>
-                <th> Created Time </th>
-                <th> Updated Time </th>
-                <th> Top 5 Contributors </th>
-
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let r of filteredList" [ngClass]="{'success': r.fork, 'info': !r.fork }">
-                <td>{{r.name}}</td>
-                <td>{{r.description}}</td>
-                <td>
-                    <a href="{{r.git_url}}" target="_blank">{{r.git_url}} </a>
-                </td>
-                <td>{{r.language}}</td>
-                <td>{{r.fork}}</td>
-                <td>{{r.stargazers_count}}</td>
-                <td>{{ r.watchers_count}}</td>
-                <td>{{ r.license?.name }}</td>
-                <td> {{ r.created_at}}</td>
-                <td> {{ r.updated_at}}</td>
-                <td *ngIf="!r.top5Contributors"> <button class="btn-info btn-sm" (click)="getTop5Contributors(r)"> Click
-                        to View </button></td>
-                <td *ngIf="r.top5Contributors"> {{ r.top5Contributors }}</td>
-
-            </tr>
-        </tbody>
-
-    </table>
+<div class="container">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th *ngFor="let head of headElements" scope="col">{{head}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let list of filteredList" [ngClass]="{'success': list.fork, 'info': !list.fork }">
+        <td>{{list.name}}</td>
+        <td>{{list.description}}</td>
+        <td>
+          <a href="{{list.git_url}}" target="_blank">Link</a>
+        </td>
+        <td>{{list.language}}</td>
+        <td>{{list.fork}}</td>
+        <td>{{list.stargazers_count}}</td>
+        <td>{{ list.watchers_count}}</td>
+        <td>{{ list.license?.name }}</td>
+        <td> {{ list.created_at}}</td>
+        <td> {{ list.updated_at}}</td>
+        <td *ngIf="!list.top5Contributors"> <button class="btn btn-outline-info" (click)="getTop5Contributors(list)">
+            Click
+            to View </button></td>
+        <td *ngIf="list.top5Contributors"> {{ list.top5Contributors }}</td>
+      </tr>
+    </tbody>
+  </table>
 </div>
-
-
-
-
-<!-- <ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table> -->
