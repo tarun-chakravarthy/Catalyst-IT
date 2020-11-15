@@ -8,6 +8,7 @@ import { GithubCatalystService } from 'src/app/services/github-catalyst.service'
 })
 
 export class RepoListComponent implements OnInit {
+
   settings = {
     actions: {
       add: false,
@@ -38,6 +39,20 @@ export class RepoListComponent implements OnInit {
       }
     }
   };
+
+  headElements = [
+    'Name',
+    'Description',
+    'Git-hub URL',
+    'Language',
+    'Fork/Un-Forked',
+    'Star Count',
+    'Watchers Count',
+    'License',
+    'Created Time',
+    'Updated Time',
+    'Top-5 Contributors'
+  ];
 
   data: any[] = [];
   filteredList: any[] = [];

@@ -1,0 +1,73 @@
+$layout-breakpoint-small: 1080px
+$background-color: #f8f8f8
+$border-color: #d9ecf2
+$border-bottom-color: #ffffff
+$medium-font: 1.5em
+
+body
+    line-height: 1.25
+
+.filter-options
+    display: flex
+    justify-content: space-around
+    padding: 10px
+
+table
+    border: 2px solid $border-color
+    border-collapse: border-collapse
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
+
+table caption
+    font-size: $medium-font
+    margin: .5em 0 .75em
+
+table tr
+    background-color: $background-color
+    padding: .35em
+
+table th,
+table td
+    padding: .625em
+    text-align: justify
+
+table th
+    font-size: .85em
+    letter-spacing: .1em
+    text-transform: uppercase
+
+@media screen and (max-width: $layout-breakpoint-small)
+
+    table
+        border: 0
+
+    table caption
+        font-size: $medium-font
+
+    table thead
+        border: none
+        clip: rect(0 0 0 0)
+        height: 1px
+        margin: -1px
+        overflow: hidden
+        padding: 0
+        position: absolute
+        width: 1px
+
+    table tr
+        border-bottom: 3px solid $border-bottom-color
+        display: block
+        margin-bottom: .625em
+
+    table td
+        border-bottom: 1px solid $border-bottom-color
+        display: block
+        font-size: .8em
+        text-align: center
+
+    table td::before
+        float: left
+        font-weight: bold
+        text-transform: uppercase
+
+    table td:last-child
+        border-bottom: 0
