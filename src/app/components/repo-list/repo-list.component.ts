@@ -4,7 +4,7 @@ import { GithubCatalystService } from 'src/app/services/github-catalyst.service'
 @Component({
   selector: 'app-repo-list',
   templateUrl: './repo-list.component.html',
-  styleUrls: ['./repo-list.component.scss']
+  styleUrls: ['./repo-list.component.sass']
 })
 
 export class RepoListComponent implements OnInit {
