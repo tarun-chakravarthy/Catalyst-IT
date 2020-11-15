@@ -4,7 +4,7 @@ import { GithubCatalystService } from 'src/app/services/github-catalyst.service'
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
-  styleUrls: ['./details.component.sass']
+  styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
 
