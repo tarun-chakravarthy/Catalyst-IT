@@ -14,23 +14,6 @@ After your navigate to `http://localhost:4200/`
 - Navigate to the Company Details page using the Nav-bar Links
 - Navigate to the Repositories page to interact with the table that lists all the repositories and details with filter options.
 
-## User Stories
-
-User is able to see the git-hub details of the Catalyst-IT company such as:
-- Company name
-- Git-user Avatar
-- Location of the Company
-- Description of the company
-- Number of Public Repositories
-- Git-hub Link
-- Blog Link
-
-User is able to filter the Repository table with multiple options in Repositories page, such as:
-- Forked 
-- Not-forked
-- All
-- Name, Created Time, and Updated Time (Sorting with ASC and DSC)
-
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
@@ -54,3 +37,20 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## User Stories
+
+User is able to see the git-hub details of the Catalyst-IT company such as:
+- Company name
+- Git-user Avatar
+- Location of the Company
+- Description of the company
+- Number of Public Repositories
+- Git-hub Link
+- Blog Link
+
+User is able to filter the Repository table with multiple options in Repositories page, such as:
+- Forked 
+- Not-forked
+- All
+- Name, Created Time, and Updated Time (Sorting with ASC and DSC)
