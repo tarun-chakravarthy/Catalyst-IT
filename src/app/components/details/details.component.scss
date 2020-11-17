@@ -1,12 +1,14 @@
+@import "../../../styles.sass";
+
 //Details-Card
 .card-elegant {
-  background-color: #FAFAFA;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .25);
+  background-color: $background-color;
+  box-shadow: 0 2px 4px $box-shadow;
   border: none;
 }
 
 .card-elegant .card-block {
-  padding: 10px 0 25px 0;
+  padding: $xs 0 $xs+$sm 0;
   text-align: center;
 }
 
@@ -19,62 +21,62 @@
 .card-img-top {
   width: 50%;
   height: 50%;
-  padding: 10px;
+  padding: $xs;
 }
 
 .card-elegant .card-title {
   font-weight: normal;
-  margin: 15px 0;
+  margin: $sm 0;
   font-size: medium;
-  color: #1a1a2e;
+  color: $secondary;
 }
 
 .card-elegant .card-title small {
-  color: #1a1a2e;
+  color: $secondary;
   display: inline-block;
   font-size: medium;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: $sm;
 }
 
 .card-elegant .card-text {
   border-bottom: 1px solid #C7C7C5;
-  color: #1a1a2e;
+  color: $secondary;
   font-size: medium;
-  padding: 10px;
-  margin: 0 5px 0 5px;
+  padding: $xs;
+  margin: 0 $xxs;
 }
 
 .card-elegant .btn-link {
-  color: #1a1a2e;
+  color: $secondary;
   font-size: medium;
   text-decoration: none;
 }
 
 .card-elegant .btn-link:hover,
 .card-elegant .btn-link:focus {
-  color: #1a1a2e;
+  color: $secondary;
 }
 
 
 //social-icons
 .social-icons i {
   display: inline-block;
-  font-size: 16px;
-  color: #BB2025;
+  font-size: $sm;
+  color: $primary;
   text-align: center;
-  border: 1px solid #BB2025;
+  border: 1px solid $primary;
   width: 50px;
   height: 50px;
   line-height: 50px;
   border-radius: 50%;
-  margin: 0 5px;
+  margin: 0 $xxs;
 }
 
 .social-icons .icon-block {
   float: left;
   width: 100%;
-  margin-top: 15px;
+  margin-top: $sm;
 }
 
 .social-icons .icon-block a {
@@ -82,7 +84,7 @@
 }
 
 .social-icons i:hover {
-  background-color: #BB2025;
-  color: #fff;
+  background-color: $primary;
+  color: $border-bottom-color;
   text-decoration: none;
 }

@@ -41,6 +41,7 @@ export class RepoListComponent implements OnInit {
   };
 
   headElements = [
+    'Fork-Status',
     'Name',
     'Description',
     'Git-hub URL',
