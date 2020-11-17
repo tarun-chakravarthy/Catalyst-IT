@@ -25,3 +25,9 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Design Link
+
+To have a look at the UI Mock-up check out the Figma Link for Desktop: [Figma-Desktop](https://www.figma.com/file/YhKCzXHY7CPENmk6IV5MOo/Desktop-app?node-id=0%3A1)
+
+To have a look at the Mobile UI Mock-up check out the Figma Link for Mobile: [Figma-Mobile] (https://www.figma.com/file/9e9fu5Uy3JOT8gID1GemhJ/Mobile-app)
