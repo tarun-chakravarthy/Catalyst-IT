@@ -1,8 +1,7 @@
 <div class="filter-options">
-
   <div>
-    <label class="radio-inline"><input type="radio" name="optradio" (change)="applyFilter('Forked')"><i
-        class="fa fa-code-fork" aria-hidden="true"></i> Forked</label>
+    <label class="radio-inline"><input type="radio" name="optradio" (change)="applyFilter('Forked')">
+      <i class="fa fa-code-fork" aria-hidden="true"></i> Forked</label>
     <label class="radio-inline"><input type="radio" name="optradio" (change)="applyFilter('Not Forked')">Not
       Forked</label>
     <label class="radio-inline"><input type="radio" name="optradio" (change)="applyFilter('All')">All</label>
@@ -22,11 +21,13 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th *ngFor="let head of headElements" scope="col">{{head}}</th>
+        <th *ngFor="let head of headElements" scope="col"> {{head}} </th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let list of filteredList" [ngClass]="{'success': list.fork, 'info': !list.fork }">
+      <tr *ngFor="let list of filteredList">
+        <td [ngClass]="{'forked': list.fork, 'not-forked': !list.fork }"><i class="fa fa-circle" aria-hidden="true"></i>
+        </td>
         <td>{{list.name}}</td>
         <td>{{list.description}}</td>
         <td>

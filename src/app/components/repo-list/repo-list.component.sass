@@ -1,38 +1,29 @@
-$layout-breakpoint-small: 1080px
-$background-color: #f8f8f8
-$border-color: #d9ecf2
-$border-bottom-color: #ffffff
-$medium-font: 1.5em
-
-body
-    line-height: 1.25
+@import "../../../styles"
 
 .filter-options
     display: flex
     justify-content: space-around
-    padding: 10px
+    padding: $xs
+
+.forked
+    color: $success
+
+.not-forked
+    color: $warning
 
 table
-    border: 2px solid $border-color
-    border-collapse: border-collapse
-    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22)
-
-table caption
-    font-size: $medium-font
-    margin: .5em 0 .75em
+    box-shadow: 0 19px 38px $box-shadow, 0 $sm 12px rgba(0,0,0,0.22)
+    font-family: $font-family-sans-serif
 
 table tr
     background-color: $background-color
-    padding: .35em
 
 table th,
 table td
-    padding: .625em
-    text-align: justify
+    vertical-align: middle
 
 table th
-    font-size: .85em
-    letter-spacing: .1em
+    font-size: .75em
     text-transform: uppercase
 
 @media screen and (max-width: $layout-breakpoint-small)
@@ -40,11 +31,16 @@ table th
     table
         border: 0
 
+    .filter-options
+        flex-direction: column
+        padding: $xs
+
     table caption
         font-size: $medium-font
 
     table thead
         border: none
+        text-align: right
         clip: rect(0 0 0 0)
         height: 1px
         margin: -1px
@@ -53,16 +49,11 @@ table th
         position: absolute
         width: 1px
 
-    table tr
-        border-bottom: 3px solid $border-bottom-color
-        display: block
-        margin-bottom: .625em
-
     table td
         border-bottom: 1px solid $border-bottom-color
         display: block
         font-size: .8em
-        text-align: center
+        text-align: left
 
     table td::before
         float: left

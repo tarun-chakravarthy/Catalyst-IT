@@ -8,13 +8,12 @@
             <img class="card-img-top" src="{{users.avatar_url}}" alt="Card image cap" />
           </div>
           <div>
-            <h4><i class="fa fa-map-marker" aria-hidden="true"></i> {{users.location}}</h4>
+            <h4><b>{{users.name}}</b> | <i class="fa fa-map-marker" aria-hidden="true"></i> {{users.location}}</h4>
           </div>
         </div>
         <div class="card-block">
           <h5 class="card-title">
-            <small>Git Hub User with <b>{{users.public_repos}} </b> public repositories</small>
-            <br>{{users.name}}</h5>
+            <small>Git Hub User with <b>{{users.public_repos}} </b> public repositories</small></h5>
           <h6 class="card-text"> <b> Description </b> </h6>
           <h2 class="card-text"> {{users.description}} </h2>
           <div class="social-icons">

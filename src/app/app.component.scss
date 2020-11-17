@@ -1,1 +1,32 @@
+@import "../custom-theme.scss";
+@import "../styles.sass";
 
+body {
+  margin: 0;
+  text-align: center;
+  font-family: $font;
+}
+
+.logo {
+  height: $medium + $xs;
+  width: auto;
+}
+
+a {
+  color: $border-bottom-color;
+}
+
+a:hover {
+  background-color: $background-color;
+  box-shadow: 0 2px 4px $box-shadow;
+}
+
+a:link {
+  margin: 0 2*$xs;
+  text-decoration: none;
+}
+
+/* Navigation Bar  */
+.navbar {
+  margin-bottom: $xs;
+}
